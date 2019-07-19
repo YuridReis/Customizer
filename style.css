@@ -1,0 +1,726 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+
+/*! Css Header */
+
+nav {
+  width: 100vw;
+  height: 8vh;
+  display: flex;
+  background: rgb(98, 52, 184);
+  position: sticky;
+}
+
+.logo {
+  flex: 1.5;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 3.125rem;
+  font-weight: bolder;
+  letter-spacing: 0.1875rem;
+  font-size: 1.25rem;
+  color: white;
+}
+
+.logo h4 {
+  cursor: pointer;
+  padding: 1.25rem;
+}
+
+.logo a {
+  text-decoration: none;
+  color: white;
+}
+
+.lista {
+  flex: 1;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.9375rem 0 2.5rem;
+  font-weight: 500;
+  letter-spacing: 0.1875rem;
+}
+
+.lista a {
+  text-decoration: none;
+  white-space: nowrap;
+  color: white;
+  padding: 1.25rem;
+}
+
+.lista a:hover {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+#check_magic {
+  display: none;
+}
+
+.burger {
+  display: none;
+  margin-top: 2vh;
+  margin-right: 0.6rem;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 1.563rem;
+  height: 0.25rem;
+  background: rgba(255, 255, 255, 0.719);
+  margin: 0.3125rem;
+}
+
+.exit_menu {
+  width: 1.563rem;
+  height: 0.3125rem;
+  margin: 0.3125rem;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: bolder;
+  cursor: pointer;
+  display: none;
+}
+
+/*! Fim Header.*/
+
+/*! Css Home.*/
+
+.main {
+  width: 100vw;
+  min-height: 92vh;
+  background: linear-gradient(to left, rgb(230, 227, 227), rgb(247, 247, 247));
+  display: flex;
+}
+
+.left_container {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  justify-content: center;
+  padding-left: 15vh;
+  padding-bottom: 10vh;
+  flex: 1;
+}
+
+.left_container_text {
+  line-height: 2.188rem;
+  white-space: nowrap;
+}
+
+.left_container_text h2 {
+  font-size: 1.625rem;
+  padding-bottom: 2vh;
+}
+
+.left_container_text p {
+  font-size: 1.125rem;
+  padding-left: 1vh;
+}
+
+.left_container_buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2vh 0 0 1vh;
+}
+
+.button {
+  width: 12.5rem;
+  padding: 0.625rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  background-size: 200%;
+  transition: 0.6s;
+  font-size: 1rem;
+  margin-right: 3vh;
+  outline: none;
+}
+
+.button a {
+  text-decoration: none;
+  color: white;
+}
+
+.try {
+  background-image: linear-gradient(
+    to left,
+    rgb(135, 245, 108),
+    rgb(20, 88, 3),
+    rgb(135, 245, 108)
+  );
+}
+
+.about {
+  background-image: linear-gradient(
+    to left,
+    rgb(238, 102, 97),
+    rgb(109, 11, 8),
+    rgb(238, 102, 97)
+  );
+}
+
+.button:hover {
+  background-position: right;
+  color: black;
+  font-weight: bold;
+}
+
+.button:hover a {
+  color: black;
+  font-weight: bold;
+}
+
+.right_container {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10vh 0 20vh 0;
+}
+
+.image_list {
+  width: 28.13rem;
+  height: 25rem;
+}
+
+.image_list img {
+  width: 100%;
+  height: 100%;
+  animation: drop 1.5s ease;
+}
+
+.image_list_text {
+  font-size: 1.125rem;
+  text-align: center;
+}
+
+/*! Fim Css Home*/
+
+/*! Css Login */
+
+.login_container {
+  position: absolute;
+  background: rgb(53, 27, 100);
+  width: 25rem;
+  padding: 2.5rem;
+  height: 34.38rem;
+  top: 15%;
+  left: 35%;
+  text-align: center;
+  animation: drop 1.5s ease;
+}
+
+.fade {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.login_container h1 {
+  color: white;
+  font-weight: 500;
+  font-size: 2.188rem;
+}
+
+.login_container input[type="text"],
+.login_container input[type="password"] {
+  background: none;
+  display: block;
+  margin: 1.25rem auto;
+  text-align: center;
+  padding: 0.875rem 0.625rem;
+  border: 2px solid #226896;
+  width: 12.5rem;
+  outline: none;
+  color: white;
+  border-radius: 1.5rem;
+  transition: 0.25s;
+  font-size: 1.125rem;
+}
+
+.login_container input[type="text"]:focus,
+.login_container input[type="password"]:focus {
+  width: 17.5rem;
+  border-color: rgb(135, 245, 108);
+}
+
+.login_container input[type="submit"] {
+  background: none;
+  display: block;
+  margin: 1.25rem auto;
+  text-align: center;
+  padding: 0.875rem 2.5rem;
+  border: 2px solid rgb(135, 245, 108);
+  outline: none;
+  color: white;
+  border-radius: 1.5rem;
+  transition: 0.25s;
+  font-size: 1.125rem;
+  cursor: pointer;
+  margin-bottom: 1.25rem;
+}
+
+.login_container input[type="text"]::placeholder,
+.login_container input[type="password"]::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.login_container input[type="submit"]:hover {
+  background: rgb(16, 202, 62);
+}
+
+.input_text {
+  color: white;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+
+.input_text:hover {
+  color: black;
+}
+
+.exit_container {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: bolder;
+  cursor: pointer;
+  text-align: center;
+  display: none;
+}
+
+/*! Fim Css Login*/
+
+/*! Css Create Account */
+
+.sign-up_container {
+  position: absolute;
+  background: rgb(53, 27, 100);
+  width: 25rem;
+  padding: 2.5rem;
+  height: 31.25rem;
+  top: 15%;
+  left: 35%;
+  text-align: center;
+  animation: drop 1.5s ease;
+}
+
+.sign-up_container h1 {
+  color: white;
+  font-weight: 500;
+  font-size: 2.188rem;
+}
+
+.sign-up_container input[type="text"],
+.sign-up_container input[type="email"],
+.sign-up_container input[type="password"] {
+  background: none;
+  display: block;
+  margin: 1.25rem auto;
+  text-align: center;
+  padding: 0.875rem 0.625rem;
+  border: 2px solid #226896;
+  width: 12.5rem;
+  outline: none;
+  color: white;
+  border-radius: 1.5rem;
+  transition: 0.25s;
+  font-size: 1.125rem;
+}
+
+.sign-up_container input[type="text"]:focus,
+.sign-up_container input[type="email"]:focus,
+.sign-up_container input[type="password"]:focus {
+  width: 17.5rem;
+  border-color: rgb(135, 245, 108);
+}
+
+.sign-up_container input[type="submit"] {
+  background: none;
+  display: block;
+  margin: 1.25rem auto;
+  text-align: center;
+  padding: 0.875rem 2.5rem;
+  border: 2px solid rgb(135, 245, 108);
+  outline: none;
+  color: white;
+  border-radius: 1.5rem;
+  transition: 0.25s;
+  font-size: 1.125rem;
+  cursor: pointer;
+  margin-bottom: 1.25rem;
+}
+
+.sign-up_container input[type="text"]::placeholder,
+.sign-up_container input[type="email"]::placeholder,
+.sign-up_container input[type="password"]::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.sign-up_container input[type="submit"]:hover {
+  background: rgb(16, 202, 62);
+}
+
+.input_text {
+  color: white;
+  text-decoration: none;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+
+.input_text:hover {
+  color: black;
+}
+
+/*! Fim Css Create Account */
+
+/*! Css Contact */
+
+.contact_container {
+  position: absolute;
+  background: rgb(53, 27, 100);
+  width: 25rem;
+  padding: 2.5rem;
+  height: 34.38rem;
+  top: 15%;
+  left: 35%;
+  text-align: center;
+  animation: drop 1.5s ease;
+}
+
+.contact_container h1 {
+  color: white;
+  font-weight: 500;
+  font-size: 2.188rem;
+}
+
+.contact_container input[type="text"],
+.contact_container input[type="email"],
+.contact_container input[type="password"] {
+  background: none;
+  display: block;
+  margin: 1.25rem auto;
+  text-align: center;
+  padding: 0.875rem 0.625rem;
+  border: 2px solid #226896;
+  width: 12.5rem;
+  outline: none;
+  color: white;
+  border-radius: 1.5rem;
+  transition: 0.25s;
+  font-size: 1.125rem;
+}
+
+.contact_container input[type="text"]:focus,
+.contact_container input[type="email"]:focus,
+.contact_container input[type="password"]:focus {
+  width: 17.5rem;
+  border-color: rgb(135, 245, 108);
+}
+
+.message {
+  background: none;
+  display: block;
+  margin: 1.25rem auto;
+  text-align: center;
+  padding: 0.875rem 0.625rem;
+  border: 2px solid #226896;
+  outline: none;
+  color: white;
+  border-radius: 1.5rem;
+  transition: 0.25s;
+  font-size: 1.125rem;
+  resize: none;
+}
+
+.message:focus {
+  border-color: rgb(135, 245, 108);
+}
+
+.contact_container input[type="submit"] {
+  background: none;
+  display: block;
+  margin: 1.25rem auto;
+  text-align: center;
+  padding: 0.875rem 2.5rem;
+  border: 2px solid rgb(135, 245, 108);
+  outline: none;
+  color: white;
+  border-radius: 1.5rem;
+  transition: 0.25s;
+  font-size: 1.125rem;
+  cursor: pointer;
+  margin-bottom: 1.25rem;
+}
+
+.contact_container input[type="text"]::placeholder,
+.contact_container input[type="email"]::placeholder,
+.contact_container input[type="password"]::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.contact_container input[type="submit"]:hover {
+  background: rgb(16, 202, 62);
+}
+
+/*! Fim Css Contact */
+
+/*! Css About */
+
+.about_container {
+  position: absolute;
+  background: rgb(53, 27, 100);
+  width: 25rem;
+  padding: 2.5rem;
+  height: 34.38rem;
+  top: 15%;
+  left: 35%;
+  text-align: center;
+  animation: drop 1.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.about_container h1 {
+  color: rgb(212, 206, 206);
+  letter-spacing: 0.3125rem;
+}
+
+.about_container p {
+  color: white;
+  line-height: 1.563rem;
+}
+
+#to_contact {
+  cursor: pointer;
+  color: rgb(7, 6, 6);
+  font-weight: bold;
+}
+
+/*! Fim Css About */
+
+/*! Responsive Design*/
+
+@keyframes drop {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 1110px) {
+  .main {
+    flex-direction: column;
+    flex-flow: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .right_container {
+    flex: 1;
+    padding: 0;
+    margin-top: 5vh;
+  }
+
+  .left_container {
+    flex: 1.8;
+    padding: 0;
+    text-align: center;
+  }
+
+  .image_list {
+    width: 19.5rem;
+    height: 19.5rem;
+  }
+
+  .left_container_buttons {
+    justify-content: center;
+    padding-left: 2vw;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .lista {
+    position: fixed;
+    background: rgb(53, 27, 100);
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1.25rem;
+    right: -200%;
+    display: none;
+  }
+
+  .lista a {
+    background: rgb(53, 27, 100);
+    padding: 4.2vh;
+    width: 100vw;
+    text-align: center;
+    display: block;
+    font-size: 1.25em;
+    color: white;
+  }
+
+  .exit_menu {
+    display: block;
+    width: 100vw;
+    padding: 4.2vh;
+    text-align: center;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  #check_magic:checked ~ .lista {
+    display: flex;
+    right: 0%;
+    animation: menu_roll 0.8s ease;
+  }
+
+  @keyframes menu_roll {
+    0% {
+      transform: translateX(200%);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .image_list {
+    width: 17.5rem;
+    height: 17.5rem;
+  }
+
+  /* ! Login */
+
+  .login_container {
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+  }
+
+  .exit_container {
+    display: block;
+  }
+
+  /* ! Fim Login */
+
+  /* ! Sign-up */
+
+  .sign-up_container {
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+  }
+  /* ! Fim Sign-up */
+
+  /*! Contact */
+
+  .contact_container {
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+  }
+
+  /*! Fim Contact */
+
+  /*! About*/
+
+  .about_container {
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+  }
+
+  /*! Fim About*/
+}
+
+@media screen and (max-width: 610px) {
+  .left_container_text h2 {
+    font-size: 1.4rem;
+  }
+  .left_container_text p {
+    font-size: 0.8rem;
+  }
+
+  .left_container_buttons {
+    padding-left: 4vw;
+  }
+
+  .button {
+    width: 9.375rem;
+    padding: 0.625rem;
+  }
+
+  .image_list_text {
+    font-size: 1rem;
+  }
+
+  .image_list {
+    width: 15rem;
+    height: 15rem;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .left_container_text p {
+    padding: 0 1.25rem;
+    white-space: normal;
+    line-height: 1.7;
+  }
+
+  .button {
+    font-size: 0.8rem;
+    width: 7.5rem;
+    margin-right: 2vh;
+  }
+
+  .image_list {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  .right_container {
+    flex: 0.5;
+    padding: 0;
+    margin-top: 5vh;
+  }
+  .left_container {
+    flex: 2;
+    justify-content: flex-start;
+  }
+}
+
+/*! Fim Responsive Design*/
