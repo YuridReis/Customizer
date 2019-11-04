@@ -448,6 +448,7 @@ nav {
   transition: 0.25s;
   font-size: 1.125rem;
   resize: none;
+  max-width: 100%;
 }
 
 .message:focus {
